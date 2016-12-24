@@ -1,0 +1,9 @@
+objects = main.o test.o
+
+show: $(objects)
+	g++ -o show $(objects)
+
+
+.PHONY: clean
+clean:
+	rm show $(objects)

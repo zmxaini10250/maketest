@@ -1,0 +1,12 @@
+show: main.o test.o
+	g++ -o show main.o test.o
+
+main.o: ./main.cpp
+	g++ -c ./main.cpp
+
+test.o: ./test.cpp
+	g++ -c ./test.cpp
+
+.PHONY: clean
+clean:
+	rm show main.o test.o

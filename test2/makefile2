@@ -1,0 +1,15 @@
+objects = main.o test.o
+
+show: $(objects)
+	g++ -o show $(objects)
+
+main.o: ./test2/main.cpp
+	g++ -c ./test2/main.cpp
+
+test.o: ./test2/src/test.cpp
+	g++ -c ./test2/src/test.cpp
+
+.PHONY: clean
+clean:
+	rm show $(objects)
+
