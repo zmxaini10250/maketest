@@ -1,0 +1,13 @@
+test: main.o ride.o
+	g++ -o test main.o ride.o
+
+main.o: src/main.cpp src/ride.h
+	g++ -c src/main.cpp
+
+ride.o: src/ride.cpp src/ride.h
+	g++ -c src/ride.cpp
+
+.PHONY:clean
+clean:
+	rm test main.o ride.o
+
