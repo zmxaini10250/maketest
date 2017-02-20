@@ -3,10 +3,10 @@ objects = main.o ride.o
 test: $(objects)
 	g++ -o test $(objects)
 
-main.o: src/main.cpp src/ride.h
+main.o: main.cpp ride.h
 	g++ -c main.cpp
 
-ride.o: src/ride.cpp src/ride.h
+ride.o: ride.cpp ride.h
 	g++ -c ride.cpp
 
 .PHONY:clean

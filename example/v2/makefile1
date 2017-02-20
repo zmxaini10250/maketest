@@ -1,2 +1,0 @@
-test: src/main.cpp src/ride.h src/ride.cpp
-	g++ -o test src/main.cpp src/ride.cpp
